@@ -1,0 +1,9 @@
+server.py
+import BaseHTTPServer   ->   import http.server
+JSONHandler(BaseHTTPServer.BaseHTTPRequestHandler)   ->   JSONHandler(http.server.BaseHTTPRequestHandler)
+s.wfile.write(json.dumps(response))   ->   s.wfile.write(bytes(json.dumps(response), "utf-8"))
+server_class = BaseHTTPServer.HTTPServer   ->  server_class = http.server.HTTPServer;
+print  -> print()
+
+ocr.py
+data['y0'] -> data.y0
